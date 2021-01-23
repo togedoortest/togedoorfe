@@ -1,4 +1,6 @@
 {
+
+  "homepage": "http://togedoortest.github.io/togedoorfe",
   "name": "togedoor-frontend",
   "version": "0.1.0",
   "private": true,
@@ -36,7 +38,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,5 +57,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com"
+  "proxy": "http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }

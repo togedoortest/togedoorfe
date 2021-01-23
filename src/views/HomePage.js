@@ -24,14 +24,9 @@ const HomeScreen = (props) => {
       try {
         
         setIsLoading(true);
-        let myInit = { // OPTIONAL
-          headers: {}, // OPTIONAL
-          response: true, // OPTIONAL (return the entire Axios response object instead of only response.data)
-          queryStringParameters: {  // OPTIONAL
-              name: 'param'
-          }}
+      
 
-        const response = await axios.get(myInit,"http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services");
+        const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services");
         setServices(response.data);
         setIsLoading(false);
       } catch (error) {
