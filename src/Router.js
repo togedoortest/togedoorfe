@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import HomePage from "./views/HomePage";
 import LoginScreen from "./views/LoginScreen";
 import RegisterScreen from "./views/RegisterScreen";
@@ -12,8 +12,9 @@ import EditServiceScreen from "./views/EditServiceScreen";
 import CreateServiceScreen from "./views/CreateServiceScreen";
 import { Checkout } from "./components/Checkout";
 //SendEmail
+// BrowserRouter
 const Router = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route path="/" exact component={HomePage} />
       <Route path="/service/:serviceName" exact component={ServiceScreen} />
@@ -35,7 +36,7 @@ const Router = () => (
       <Route path="/settings" component={SettingsScreen} />
       <Route path="/create" component={CreateServiceScreen} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default Router;
