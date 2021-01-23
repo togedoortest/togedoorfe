@@ -1,0 +1,31 @@
+.carousel-item > img {
+  width: 100%;
+}
+
+.homepage_carousel_text {
+  z-index: 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  padding-left: 2em;
+  padding-top: 3.5em;
+}
+
+.img-homepage{
+  padding-left: 0;
+}
+
+
+.btnJoinus{
+  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  font-weight: 800;
+  color: black;
+  border-color: rgba(119, 21, 21, 0.4) ;
+}
+
+.btnJoinus:hover{
+  border-color:rgba(219, 199, 199, 0.4) ;
+  background: linear-gradient(to right, rgba(119, 21, 21, 0.4) ,  rgba(219, 199, 199, 0.4) );
+}

@@ -1,0 +1,15 @@
+
+.serviceScreen-details {
+  padding-left: 0;
+  width: 45em;
+  height: 50em;
+}
+
+
+.serviceScreen-bg{
+  background: linear-gradient(to bottom, #dfdfdf , #757575, #dfdfdf );
+}
+
+/* .serviceScreen-row{
+  padding-left: 100px;
+} */

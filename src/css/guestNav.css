@@ -1,0 +1,43 @@
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+#guest-nav-brand {
+  border-radius: 5px;
+  padding-right: 1%;
+  font-weight: bold;
+  font-size: 2em;
+  margin-left: 0;
+  text-decoration: none;
+  color: #62646a !important;
+}
+
+.guest-nav-links {
+  margin-right: 1%;
+}
+
+.guest-nav-links a {
+  color: #000000 !important;
+}
+
+.guest-nav-links a:hover {
+  color: white !important;
+}
+
+.guest-nav-bg {
+  background: linear-gradient(to right, #0c010a, #5c525c );
+}
+
+#btnJoinus{
+  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  border-color: rgba(119, 21, 21, 0.4) ;
+  color: azure;
+}
+
+#btnJoinus:hover{
+  border-color:rgba(219, 199, 199, 0.4) ;
+  background: linear-gradient(to right, rgba(119, 21, 21, 0.4) ,  rgba(219, 199, 199, 0.4) );
+  color: white;
+}

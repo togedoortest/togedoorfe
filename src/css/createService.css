@@ -1,0 +1,39 @@
+.service_register {
+  /* margin-top: 5em;
+  margin-bottom: 8em;
+  margin-left: 28em; */
+  /* margin: 0; */
+  width: 40em;
+  padding: 1.5em;
+  border: 0.5px solid black;
+  background: linear-gradient(to bottom, #0c010a, #5c525c );
+  color: #dfdfdf;
+}
+.service_title {
+  text-align: center;
+  font-size: 1.5em;
+}
+.service_form {
+  text-align: center;
+  font-size: 1em;
+}
+
+body,
+html {
+  height: 100%;
+  background: linear-gradient(to bottom, #dfdfdf , #757575, #dfdfdf );
+}
+
+.postBtn{
+  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  width: 25%;
+  font-weight: 800;
+  margin: 5% 38%;
+  color: black;
+  border-color: rgba(119, 21, 21, 0.4) ;
+}
+
+.postBtn:hover{
+  border-color:rgba(219, 199, 199, 0.4) ;
+  background: linear-gradient(to right, rgba(119, 21, 21, 0.4) ,  rgba(219, 199, 199, 0.4) );
+}

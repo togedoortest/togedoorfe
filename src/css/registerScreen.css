@@ -1,0 +1,178 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.register-container {
+  text-align: -webkit-center;
+  overflow: hidden;
+}
+
+.register-wrapper {
+  color: white;
+  width: 100%;
+  top: 0;
+  display: flex;
+  height: 80%;
+  font-family: "Source Sans Pro", sans-serif;
+  background: linear-gradient(to right, #acacac , #757575, #dfdfdf );
+}
+
+.register-content {
+  height: 100vh;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.register-window {
+  width: 50%;
+}
+#register-brand {
+ 
+  padding-right: 1%;
+  font-size: 2.3em;
+  margin-right: 75%;
+  text-decoration: none;
+}
+
+#img-Logo{
+  margin-top: 20px;
+}
+
+.register-form {
+  margin-top: 12%;
+  font-size: 20px;
+  width: 90%;
+}
+
+.register-form input {
+  padding-left: 1%;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  width: 60%;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-bottom: 1px solid rgba(219, 199, 199, 0.4) ;
+  padding-right: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 3%;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+}
+
+.register-form input:focus {
+  height: 50px;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(119, 21, 21, 0.4);
+  font-size: 20px;
+}
+
+.register-button {
+  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  border-color: rgba(119, 21, 21, 0.4) ;
+  width: 25%;
+  font-weight: 800;
+  color: black;
+  margin: 2.5% 38%;
+}
+
+.register-button:hover{
+  border-color:rgba(219, 199, 199, 0.4) ;
+  background: linear-gradient(to right, rgba(119, 21, 21, 0.4) ,  rgba(219, 199, 199, 0.4) );
+}
+.register-headline-content {
+  margin: 20.5% 13%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+#register-content-title {
+  font-size: 2.3em;
+  margin-bottom: 6.5%;
+  color: black;
+  text-shadow: 1px 1px black;
+}
+
+.register-content-text {
+  color: black;
+  text-shadow: 1px 1px black;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.register-content a {
+  
+  text-decoration: none;
+}
+
+.content-login-button {
+  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  border-color: rgba(119, 21, 21, 0.4) ;
+  width: 25%;
+  font-weight: 800;
+  margin: 5% 38%;
+  color: black;
+}
+
+.content-login-button:hover {
+  border-color:rgba(219, 199, 199, 0.4) ;
+  background: linear-gradient(to right, rgba(119, 21, 21, 0.4) ,  rgba(219, 199, 199, 0.4) );
+}
+
+
+.btn-facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
+  
+  margin-bottom: 3%;
+}
+
+
+
+.btn-social {
+  position: relative;
+  padding-left: 44px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-social:hover {
+  color: #eee;
+}
+
+.btn-social :first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  padding: 7px;
+  font-size: 1.6em;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+#facebookLogo{
+  background-color: #3A5A97;
+}
+
+.kep-login-facebook{
+  font-size: 1em;
+  font-weight: 800;
+  margin: 0;
+  background-color: #4c69ba;
+ color: white;
+  margin: 0;
+  text-decoration: none;
+}
