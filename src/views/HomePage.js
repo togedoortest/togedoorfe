@@ -21,10 +21,15 @@ const HomeScreen = (props) => {
   
   useEffect(() => {
     async function fetchData() {
-      setIsLoading(true);
-      const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services");
-      setServices(response.data);
-      setIsLoading(false);
+      try {
+        
+        setIsLoading(true);
+        const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services");
+        setServices(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
     fetchData();
   }, []);
