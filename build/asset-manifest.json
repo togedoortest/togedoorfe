@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/togedoorfe/static/css/main.b878cc38.chunk.css",
-    "main.js": "/togedoorfe/static/js/main.b9d9a79e.chunk.js",
-    "main.js.map": "/togedoorfe/static/js/main.b9d9a79e.chunk.js.map",
+    "main.js": "/togedoorfe/static/js/main.ddf355f9.chunk.js",
+    "main.js.map": "/togedoorfe/static/js/main.ddf355f9.chunk.js.map",
     "runtime-main.js": "/togedoorfe/static/js/runtime-main.f9e3d66f.js",
     "runtime-main.js.map": "/togedoorfe/static/js/runtime-main.f9e3d66f.js.map",
     "static/js/2.73d35aa2.chunk.js": "/togedoorfe/static/js/2.73d35aa2.chunk.js",
     "static/js/2.73d35aa2.chunk.js.map": "/togedoorfe/static/js/2.73d35aa2.chunk.js.map",
     "index.html": "/togedoorfe/index.html",
-    "precache-manifest.3665e833af3e3874b22ddfcd698f1d6d.js": "/togedoorfe/precache-manifest.3665e833af3e3874b22ddfcd698f1d6d.js",
+    "precache-manifest.86416de3cd54fc4f4c2eaf30210146e9.js": "/togedoorfe/precache-manifest.86416de3cd54fc4f4c2eaf30210146e9.js",
     "service-worker.js": "/togedoorfe/service-worker.js",
     "static/css/main.b878cc38.chunk.css.map": "/togedoorfe/static/css/main.b878cc38.chunk.css.map",
     "static/js/2.73d35aa2.chunk.js.LICENSE.txt": "/togedoorfe/static/js/2.73d35aa2.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.f9e3d66f.js",
     "static/js/2.73d35aa2.chunk.js",
     "static/css/main.b878cc38.chunk.css",
-    "static/js/main.b9d9a79e.chunk.js"
+    "static/js/main.ddf355f9.chunk.js"
   ]
 }
