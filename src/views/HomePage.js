@@ -24,9 +24,9 @@ const HomeScreen = (props) => {
       try {
         
         setIsLoading(true);
-      
-
-        const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services");
+        //http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services
+        // https://togedoor.herokuapp.com/services
+        const response = await axios.get("https://togedoor.herokuapp.com/services");
         setServices(response.data);
         setIsLoading(false);
       } catch (error) {

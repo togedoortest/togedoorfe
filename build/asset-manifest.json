@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/togedoorfe/static/css/main.b878cc38.chunk.css",
+    "main.js": "/togedoorfe/static/js/main.f0998359.chunk.js",
+    "main.js.map": "/togedoorfe/static/js/main.f0998359.chunk.js.map",
+    "runtime-main.js": "/togedoorfe/static/js/runtime-main.f9e3d66f.js",
+    "runtime-main.js.map": "/togedoorfe/static/js/runtime-main.f9e3d66f.js.map",
+    "static/js/2.73d35aa2.chunk.js": "/togedoorfe/static/js/2.73d35aa2.chunk.js",
+    "static/js/2.73d35aa2.chunk.js.map": "/togedoorfe/static/js/2.73d35aa2.chunk.js.map",
+    "index.html": "/togedoorfe/index.html",
+    "precache-manifest.fa295de8a1231e84ecbec138be9e2423.js": "/togedoorfe/precache-manifest.fa295de8a1231e84ecbec138be9e2423.js",
+    "service-worker.js": "/togedoorfe/service-worker.js",
+    "static/css/main.b878cc38.chunk.css.map": "/togedoorfe/static/css/main.b878cc38.chunk.css.map",
+    "static/js/2.73d35aa2.chunk.js.LICENSE.txt": "/togedoorfe/static/js/2.73d35aa2.chunk.js.LICENSE.txt",
+    "static/media/alesia-kazantceva.jpg": "/togedoorfe/static/media/alesia-kazantceva.a16144cb.jpg",
+    "static/media/ben-white.jpg": "/togedoorfe/static/media/ben-white.19fbc8df.jpg",
+    "static/media/emile-perron.jpg": "/togedoorfe/static/media/emile-perron.875a7bd5.jpg",
+    "static/media/neonbrand.jpg": "/togedoorfe/static/media/neonbrand.9e23a337.jpg",
+    "static/media/registrationScreen.jpg": "/togedoorfe/static/media/registrationScreen.9934ac6d.jpg",
+    "static/media/student1.jpg": "/togedoorfe/static/media/student1.1d20ec7f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9e3d66f.js",
+    "static/js/2.73d35aa2.chunk.js",
+    "static/css/main.b878cc38.chunk.css",
+    "static/js/main.f0998359.chunk.js"
+  ]
+}
