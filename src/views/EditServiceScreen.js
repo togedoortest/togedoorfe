@@ -25,7 +25,7 @@ const EditServiceScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/name/${serviceName}`
+        `http://54.190.170.95/graphql/services/name/${serviceName}`
       );
       setMyService(response.data);
       console.log(myService);
@@ -42,7 +42,7 @@ const EditServiceScreen = ({ match: { params } }) => {
 
     alert(service.subCategory);
     // axios
-    //   .patch(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/${service.name}`, service)
+    //   .patch(`http://54.190.170.95/graphql/services/${service.name}`, service)
     //   .then((response) => {
     //     console.log(response);
     //   })
@@ -65,7 +65,7 @@ const EditServiceScreen = ({ match: { params } }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories");
+      const response = await axios.get("http://54.190.170.95/graphql/categories");
       setCategories(response.data);
     }
 
@@ -75,7 +75,7 @@ const EditServiceScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories/name/${categoryName
+        `http://54.190.170.95/graphql/categories/name/${categoryName
           .split(" ")
           .join("-")}`
       );

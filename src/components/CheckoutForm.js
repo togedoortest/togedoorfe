@@ -31,7 +31,7 @@ const CheckoutForm = (props) => {
     if (!error) {
       const { id } = paymentMethod;
       try {
-        const { data } = await axios.post("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/payments", {
+        const { data } = await axios.post("http://54.190.170.95/graphql/payments", {
           id,
           amount: product.price * 100,
           name: product.name,

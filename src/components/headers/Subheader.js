@@ -10,7 +10,7 @@ const SubHeader = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories");
+      const response = await axios.get("http://54.190.170.95/graphql/categories");
       setCategories(response.data);
     }
 

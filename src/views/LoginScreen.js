@@ -42,7 +42,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
   function ApiGoogle(response) {
 
     //loginGoogle("fgd")
-    axios.post('http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
+    axios.post('http://54.190.170.95/graphql/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
       console.log('res token :');
       setisAuthenticatedGoogle(true)
       console.log(res);
@@ -135,7 +135,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
         <div className="login-window" >
           <div className="create-profile-div">
             <Link to="/register">Don't have an account ?</Link>
-            <Button href="/register" id="create-button">
+            <Button href="#/register" id="create-button">
               Create Profile
               </Button>
           </div>

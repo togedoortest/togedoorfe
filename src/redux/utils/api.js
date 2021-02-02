@@ -3,7 +3,7 @@ import store from "../../store";
 import { LOGOUT } from "../auth/types";
 
 const api = axios.create({
-  baseURL: "http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/users",
+  baseURL: "http://54.190.170.95/graphql/users",
   headers: {
     "Content-Type": "application/json",
   },

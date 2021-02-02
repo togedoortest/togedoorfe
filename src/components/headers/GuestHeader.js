@@ -20,9 +20,9 @@ const GuestHeader = () => {
         <Nav className="mr-auto"></Nav>
         <Nav className="ml-auto guest-nav-links">
           <Nav.Link href="/">English</Nav.Link>
-          <Nav.Link href="/login">Sign In</Nav.Link>
+          <Nav.Link href="#/login">Sign In</Nav.Link>
           <Form inline>
-            <Button href="/register" id="btnJoinus" >
+            <Button href="#/register" id="btnJoinus" >
               Join us
             </Button>
           </Form>

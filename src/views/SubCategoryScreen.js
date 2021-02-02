@@ -14,7 +14,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/subcategories/name/${subcategoryName}`
+        `http://54.190.170.95/graphql/subcategories/name/${subcategoryName}`
       );
       setMySubCategory(response.data);
     }
@@ -25,7 +25,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
     async function fetchData() {
       if (mySubCategory) {
         const response = await axios.get(
-          `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/getBySubCategory/${mySubCategory._id}`
+          `http://54.190.170.95/graphql/services/getBySubCategory/${mySubCategory._id}`
         );
         setServices(response.data);
         console.log(response);

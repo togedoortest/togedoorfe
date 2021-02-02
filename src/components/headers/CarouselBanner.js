@@ -26,9 +26,9 @@ const CarouselBanner = (props) => {
       <Row>
         <Col
           lg={2}
-          sm={2}
-          md={2}
-          xs={2}
+          sm={4}
+          md={4}
+          xs={4}
           style={{
             background:" linear-gradient(to bottom, #0c010a, #5c525c )" ,
             textAlign: "center",
@@ -37,12 +37,13 @@ const CarouselBanner = (props) => {
             color:"white"
           }}
         >
+         
           {user ? (
             <div>
             <p style={{ fontSize: "1.5em" }}>Hi {user.firstname} </p> 
             <p>Get offers from sellers</p>
             <p>for your project</p>
-            <Button className="btnJoinus" variant="info" href="/create">
+            <Button className="btnJoinus" variant="info" href="#/create">
             Post a Gig
           </Button>
             </div>
@@ -51,13 +52,13 @@ const CarouselBanner = (props) => {
             <p style={{ fontSize: "1.5em" }}>Hi there</p>
             <p>Get offers from sellers</p>
             <p>for your new project please</p>
-            <Button variant="info" className="btnJoinus" href="/register">
+            <Button variant="info" className="btnJoinus" href="#/register">
             Join us
             </Button>
             </div>
           )}
         </Col>
-        <Col lg={10} sm={10} md={10} xs={10} className="img-homepage">
+        <Col lg={10} sm={8} md={8} xs={8} className="img-homepage">
           <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
               <img height="300" src={First} alt="Influencer" />

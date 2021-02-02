@@ -18,7 +18,7 @@ const ProfileScreen = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services`);
+      const response = await axios.get(`http://54.190.170.95/graphql/services`);
       setServices(response.data);
     }
 

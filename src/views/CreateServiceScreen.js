@@ -9,7 +9,7 @@ import Header from "../components/headers/Header";
 
 import store from "../store";
 const CreateServiceScreen = ({history}) => {
-  debugger;
+  // debugger;
   const [file, setFile] = useState('');
   const [filename, setFilename] = useState('');
   const [formData2, setformData2] = useState('')
@@ -79,8 +79,8 @@ const CreateServiceScreen = ({history}) => {
       ,
        'Authorization':user.auth.token
         }}
-    // axios.post('http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
-  axios.post('http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/uploadfile',formData,config1) 
+    // axios.post('http://54.190.170.95/graphql/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
+  axios.post('http://54.190.170.95/graphql/services/uploadfile',formData,config1) 
  
      
        .then((response) => {
@@ -139,7 +139,7 @@ const CreateServiceScreen = ({history}) => {
 
 
   
-        axios.post("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/create", service)
+        axios.post("http://54.190.170.95/graphql/services/create", service)
       .then((response) => {
         console.log(response);
       })
@@ -183,7 +183,7 @@ setFile(file)
   // useEffect(() => {
     
   //   async function fetchData() {
-  //     const response = await axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories",config2);
+  //     const response = await axios.get("http://54.190.170.95/graphql/categories",config2);
   //     setCategories(response.data);
   //   }
 
@@ -193,10 +193,10 @@ setFile(file)
   useEffect(() => {
    // console.log(' useEffect 1');
     var tempoC=''
-    axios.get("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories",config2).then((response)=>{
+    axios.get("http://54.190.170.95/graphql/categories",config2).then((response)=>{
       tempoC=response.data
       setCategories(tempoC);
-      return (axios.get(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories/name/Agriculture & Natural Resources`)).then((res)=>{
+      return (axios.get(`http://54.190.170.95/graphql/categories/name/Agriculture & Natural Resources`)).then((res)=>{
         setSubCategories(res.data.subcategories);
         console.log(' useEffect 2');
       })
@@ -211,7 +211,7 @@ setFile(file)
     async function fetchData() {
      // console.log(' useEffect 3');
       const response = await axios.get(
-        `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/categories/name/${categoryName
+        `http://54.190.170.95/graphql/categories/name/${categoryName
           .split(" ")
           .join("-")}`
       );
@@ -236,7 +236,7 @@ setFile(file)
       <Header />
       <Container
         className="service_register"
-        style={{ border: "0.5px solid #black" }}
+        style={{ border: "0.5px solid #black" ,maxWidth:"1000px" }}
         lg={12}
         sm={12}
         md={12}

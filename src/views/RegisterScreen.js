@@ -32,7 +32,7 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
   //   console.log(response);
   //   // axios({
   //   //   method: "POST",
-  //   //   url: "http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/users/signup",
+  //   //   url: "http://54.190.170.95/graphql/users/signup",
   //   //   data: { tokenId: response.tokenId }
   //   // }).then(response => {
   //   //   console.log(response)
@@ -303,7 +303,7 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
           </div>
           <p className="register-content-text" >Already got an account ?</p>
           <Button
-            href="/login"
+            href="#/login"
             formNoValidate="true"
             type="submit"
             className="content-login-button"

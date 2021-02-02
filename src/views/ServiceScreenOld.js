@@ -29,8 +29,8 @@ const ServiceScreen = ({ match: { params },history }) => {
   useEffect(() => {
     async function fetchData() {
       //   const response = await axios.get(
-    //    // `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/name/${serviceName}`
-    //     `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/${serviceName}`
+    //    // `http://54.190.170.95/graphql/services/name/${serviceName}`
+    //     `http://54.190.170.95/graphql/services/${serviceName}`
     //   );
     //   console.log(response.data);
     //   setMyService(response.data);
@@ -38,9 +38,9 @@ const ServiceScreen = ({ match: { params },history }) => {
     //   console.log(response.data);
     
 ////// my code
-// axios.get(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/name/${serviceName}`)
+// axios.get(`http://54.190.170.95/graphql/services/name/${serviceName}`)
 // .then((res) => {
-  axios.get(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/${serviceName}`)
+  axios.get(`http://54.190.170.95/graphql/services/${serviceName}`)
  .then((res) => {
    //key=res.data[0].Key
 //  console.log(res.data[0]);
@@ -51,7 +51,7 @@ console.log('serv');
 console.log(TempoMyService);
 setMyService(TempoMyService);
 
-const requestOne =  axios.get(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/users/${TempoMyService.userID}`);
+const requestOne =  axios.get(`http://54.190.170.95/graphql/users/${TempoMyService.userID}`);
 //const requestTwo =  axios.get('https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+key+'?apikey=3AGghPNIvajU2IaEQ4wo45rAGGS6TjYD');
 
 //return axios.all([requestOne, requestTwo]);
@@ -90,7 +90,7 @@ fetchData();
         
       
       //         const response = await axios.get(
-  //           `http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/users/${myService.userID}`
+  //           `http://54.190.170.95/graphql/users/${myService.userID}`
   //         );
   //         console.log("myService");
   //         console.log(response);
@@ -115,7 +115,7 @@ fetchData();
 const messageSubject= 'From sarves name: '+ FromServes.value+'  From Email: '+FromEmail.value+' Message Subject: '+ Message.value
     const message={ProviderEmail:user.email,FromEmail:FromEmail.value,Title:Title.value,Message:messageSubject}
     axios
-      .post("http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/mailer", message)
+      .post("http://54.190.170.95/graphql/services/mailer", message)
       .then((response) => {
         console.log(response);
         alert('Email Sended ')
@@ -185,7 +185,7 @@ const messageSubject= 'From sarves name: '+ FromServes.value+'  From Email: '+Fr
                     objectFit: "cover",
                     height: "360px",
                   }}
-                  src={`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/${myService.serviceImage}`}
+                  src={`http://54.190.170.95/graphql/${myService.serviceImage}`}
                 />
                 <Card.Text style={{ paddingTop: "10px" }}>
                   Rating :{" "}
@@ -254,7 +254,7 @@ const messageSubject= 'From sarves name: '+ FromServes.value+'  From Email: '+Fr
                 authenticatedUser._id === myService.userID) ?(
 <button className='btn btn-danger' onClick={() => {
 
-  axios.delete(`http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com/services/${serviceName}`)
+  axios.delete(`http://54.190.170.95/graphql/services/${serviceName}`)
   .then((res) => {
      history.push('/')
     console.log(res);

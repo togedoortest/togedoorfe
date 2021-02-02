@@ -1,7 +1,8 @@
 
 .serviceScreen-details {
-  padding-left: 0;
-  width: 45em;
+  /* padding-left: 0;
+  max-width: 100em;
+  min-width: 20em; */
   height: 50em;
 }
 
