@@ -14,7 +14,7 @@ const CategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `http://54.190.170.95/graphql/categories/name/${categoryName}`
+        `https://www.togedoortestgo.site/graphql/categories/name/${categoryName}`
       );
       setMyCategory(response.data);
     }
@@ -27,7 +27,7 @@ const CategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
-      const response = await axios.get("http://54.190.170.95/graphql/services");
+      const response = await axios.get("https://www.togedoortestgo.site/graphql/services");
       setServices(response.data);
       setIsLoading(false);
     }

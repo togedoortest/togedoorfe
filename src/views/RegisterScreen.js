@@ -32,7 +32,7 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
   //   console.log(response);
   //   // axios({
   //   //   method: "POST",
-  //   //   url: "http://54.190.170.95/graphql/users/signup",
+  //   //   url: "https://www.togedoortestgo.site/graphql/users/signup",
   //   //   data: { tokenId: response.tokenId }
   //   // }).then(response => {
   //   //   console.log(response)

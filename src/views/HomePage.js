@@ -24,9 +24,9 @@ const HomeScreen = (props) => {
       try {
         
         setIsLoading(true);
-        //http://54.190.170.95/graphql/services
+        //https://www.togedoortestgo.site/graphql/services
         // https://togedoor.herokuapp.com/services
-        const response = await axios.get("http://54.190.170.95/graphql/services");
+        const response = await axios.get("https://www.togedoortestgo.site/graphql/services");
         setServices(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -41,7 +41,7 @@ const HomeScreen = (props) => {
   // debugger
   //   useEffect(() => {
   //     async function fetchData() {
-  //       const response = await axios.get(`http://54.190.170.95/graphql/users/${props.userName}`);
+  //       const response = await axios.get(`https://www.togedoortestgo.site/graphql/users/${props.userName}`);
   //       setUserName(response.data);
   //     }
   //     fetchData();

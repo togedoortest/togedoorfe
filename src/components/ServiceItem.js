@@ -43,7 +43,7 @@ const ServiceItem = (props) => {
           style={{ padding: "0.3em" }}
         >
            <div className="test">
-          <Card.Img src={`http://54.190.170.95/graphql/${props.serviceImage}`} />
+          <Card.Img src={`https://www.togedoortestgo.site/graphql/${props.serviceImage}`} />
           <Card.Title style={{ height: "48px", marginTop: "10px" }} >
           <span  style={{
          color: "black",

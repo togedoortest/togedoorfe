@@ -36,7 +36,7 @@ const CarouselBannerNotLogged = (props) => {
             <Carousel.Item>
               <img height="300" src={Third} alt="Gaming" />
               <Carousel.Caption className="homepage_carousel_text">
-                <h3>Atlantis's gaming store</h3>
+                <h3>Togedoor's gaming store</h3>
                 <p>Design,development,animation and more.</p>
               </Carousel.Caption>
             </Carousel.Item>

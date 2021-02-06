@@ -31,7 +31,7 @@ const CheckoutForm = (props) => {
     if (!error) {
       const { id } = paymentMethod;
       try {
-        const { data } = await axios.post("http://54.190.170.95/graphql/payments", {
+        const { data } = await axios.post("https://www.togedoortestgo.site/graphql/payments", {
           id,
           amount: product.price * 100,
           name: product.name,

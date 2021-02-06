@@ -18,7 +18,7 @@ const ProfileScreen = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(`http://54.190.170.95/graphql/services`);
+      const response = await axios.get(`https://www.togedoortestgo.site/graphql/services`);
       setServices(response.data);
     }
 

@@ -42,7 +42,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
   function ApiGoogle(response) {
 
     //loginGoogle("fgd")
-    axios.post('http://54.190.170.95/graphql/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
+    axios.post('https://www.togedoortestgo.site/graphql/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
       console.log('res token :');
       setisAuthenticatedGoogle(true)
       console.log(res);
@@ -219,15 +219,16 @@ const LoginScreen = ({ login, isAuthenticated }) => {
 
 
             </div><br />
-            <div className="facebook-login-btn ">
+            {/* <div className="facebook-login-btn ">
               <FacebookLogin
                 cssClass="kep-login-facebook metro"
                 appId="394386971840074"
                 autoLoad={true}
                 fields="name,email,picture"
                 icon="fa-facebook-square"
-                callback={responseFacebook} />
-            </div>
+                callback={responseFacebook}
+                 />
+            </div> */}
             <Link id="forget-Password">Forgot Password ?</Link>
           </form>
         </div>

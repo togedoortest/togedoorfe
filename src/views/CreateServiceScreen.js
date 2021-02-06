@@ -79,8 +79,8 @@ const CreateServiceScreen = ({history}) => {
       ,
        'Authorization':user.auth.token
         }}
-    // axios.post('http://54.190.170.95/graphql/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
-  axios.post('http://54.190.170.95/graphql/services/uploadfile',formData,config1) 
+    // axios.post('https://www.togedoortestgo.site/graphql/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
+  axios.post('https://www.togedoortestgo.site/graphql/services/uploadfile',formData,config1) 
  
      
        .then((response) => {
@@ -139,7 +139,7 @@ const CreateServiceScreen = ({history}) => {
 
 
   
-        axios.post("http://54.190.170.95/graphql/services/create", service)
+        axios.post("https://www.togedoortestgo.site/graphql/services/create", service)
       .then((response) => {
         console.log(response);
       })
@@ -183,7 +183,7 @@ setFile(file)
   // useEffect(() => {
     
   //   async function fetchData() {
-  //     const response = await axios.get("http://54.190.170.95/graphql/categories",config2);
+  //     const response = await axios.get("https://www.togedoortestgo.site/graphql/categories",config2);
   //     setCategories(response.data);
   //   }
 
@@ -193,10 +193,10 @@ setFile(file)
   useEffect(() => {
    // console.log(' useEffect 1');
     var tempoC=''
-    axios.get("http://54.190.170.95/graphql/categories",config2).then((response)=>{
+    axios.get("https://www.togedoortestgo.site/graphql/categories",config2).then((response)=>{
       tempoC=response.data
       setCategories(tempoC);
-      return (axios.get(`http://54.190.170.95/graphql/categories/name/Agriculture & Natural Resources`)).then((res)=>{
+      return (axios.get(`https://www.togedoortestgo.site/graphql/categories/name/Agriculture & Natural Resources`)).then((res)=>{
         setSubCategories(res.data.subcategories);
         console.log(' useEffect 2');
       })
@@ -211,7 +211,7 @@ setFile(file)
     async function fetchData() {
      // console.log(' useEffect 3');
       const response = await axios.get(
-        `http://54.190.170.95/graphql/categories/name/${categoryName
+        `https://www.togedoortestgo.site/graphql/categories/name/${categoryName
           .split(" ")
           .join("-")}`
       );

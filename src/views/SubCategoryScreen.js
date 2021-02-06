@@ -14,7 +14,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `http://54.190.170.95/graphql/subcategories/name/${subcategoryName}`
+        `https://www.togedoortestgo.site/graphql/subcategories/name/${subcategoryName}`
       );
       setMySubCategory(response.data);
     }
@@ -25,7 +25,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
     async function fetchData() {
       if (mySubCategory) {
         const response = await axios.get(
-          `http://54.190.170.95/graphql/services/getBySubCategory/${mySubCategory._id}`
+          `https://www.togedoortestgo.site/graphql/services/getBySubCategory/${mySubCategory._id}`
         );
         setServices(response.data);
         console.log(response);
