@@ -20,6 +20,7 @@ const CreateServiceScreen = ({history}) => {
   const user = store.getState();
 
   const [categoryName, handleCategoryName] = useState("");
+  const [subCategoryName, handleSubCategoryName] = useState("");
   const [service, setService] = useState({
 
 
@@ -32,8 +33,8 @@ const CreateServiceScreen = ({history}) => {
     price: "",
     serviceImage: null,
     //serviceImage: "",
-  //subCategory: "",
-    subCategoryID:"6002ed1d8fbce92a005ab4ac",
+    subCategoryID:"",
+    categoryName:""
    // subCategoryID:subCategories
     //_id:"init"
   });
@@ -79,8 +80,8 @@ const CreateServiceScreen = ({history}) => {
       ,
        'Authorization':user.auth.token
         }}
-    // axios.post('https://www.togedoortestgo.site/graphql/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
-  axios.post('https://www.togedoortestgo.site/graphql/services/uploadfile',formData,config1) 
+    // axios.post(' https://www.togedoortestgo.site/graphql/services/uploadfile',formData, {headers: { 'Content-Type': 'multipart/form-data'} }) 
+  axios.post(' https://www.togedoortestgo.site/graphql/services/uploadfile',formData,config1) 
  
      
        .then((response) => {
@@ -139,7 +140,7 @@ const CreateServiceScreen = ({history}) => {
 
 
   
-        axios.post("https://www.togedoortestgo.site/graphql/services/create", service)
+        axios.post(" https://www.togedoortestgo.site/graphql/services/create", service)
       .then((response) => {
         console.log(response);
       })
@@ -150,9 +151,11 @@ const CreateServiceScreen = ({history}) => {
 
   const onChange = (e) => {
     e.persist();
+    // handleSubCategoryName(e.target.value);
     setService({ ...service, [e.target.name]: e.target.value });//////////////////////////////
   //  console.log("sub ca");
  //   console.log(service);
+ console.log(service);
   };
   
   const onFileChange = (e) => {
@@ -163,10 +166,12 @@ const file = e.target.files[0];
 setFile(file)
   //  setService({ ...service, serviceImage: file });
   };
-
+debugger;
   const onChange2 = (e) => {
     e.persist();
     handleCategoryName(e.target.value);
+    console.log(e.target.key)
+    setService({ ...service, categoryName: e.target.value })
    // setService({ ...service, [e.target.name]: e.target.value });
   //  console.log("handel");
   ///  console.log(e.target.value);
@@ -183,7 +188,7 @@ setFile(file)
   // useEffect(() => {
     
   //   async function fetchData() {
-  //     const response = await axios.get("https://www.togedoortestgo.site/graphql/categories",config2);
+  //     const response = await axios.get(" https://www.togedoortestgo.site/graphql/categories",config2);
   //     setCategories(response.data);
   //   }
 
@@ -193,11 +198,14 @@ setFile(file)
   useEffect(() => {
    // console.log(' useEffect 1');
     var tempoC=''
-    axios.get("https://www.togedoortestgo.site/graphql/categories",config2).then((response)=>{
+    axios.get(" https://www.togedoortestgo.site/graphql/categories",config2).then((response)=>{
       tempoC=response.data
       setCategories(tempoC);
-      return (axios.get(`https://www.togedoortestgo.site/graphql/categories/name/Agriculture & Natural Resources`)).then((res)=>{
-        setSubCategories(res.data.subcategories);
+      console.log(tempoC[0].name.split(" ").join("-"));
+      console.log(tempoC[0].subcategories[0]._id);
+      return (axios.get(` https://www.togedoortestgo.site/graphql/categories/name/Agriculture & Natural Resources`)).then((res)=>{
+        setSubCategories(res.data.subcategories); 
+        setService({ ...service, categoryName:  tempoC[0].name.split(" ").join("-") , subCategoryID: tempoC[0].subcategories[0]._id})
         console.log(' useEffect 2');
       })
 
@@ -209,15 +217,16 @@ setFile(file)
   useEffect(() => {
 
     async function fetchData() {
-     // console.log(' useEffect 3');
+      
       const response = await axios.get(
-        `https://www.togedoortestgo.site/graphql/categories/name/${categoryName
+        ` https://www.togedoortestgo.site/graphql/categories/name/${categoryName
           .split(" ")
           .join("-")}`
       );
      // console.log("my response :", response.data.subcategories);
       setSubCategories(response.data.subcategories);
-    
+      // console.log(response.data.subcategories[0]._id);
+      setService({ ...service, subCategoryID: response.data.subcategories[0]._id })
   }
 
     fetchData();
@@ -242,7 +251,7 @@ setFile(file)
         md={12}
         xs={12}
       >
-        <Row className="container">
+        <Row>
           <Col>
             <Form onSubmit={handleSubmit(onSubmit),onSubmitFile}>
               <Form.Group className="service_title">
@@ -284,14 +293,14 @@ setFile(file)
                 </Form.Label>
                 <Col sm={4}>
                   <Form.Control
-                    name="category"
+                    name="categoryName"
                     as="select"
                 onChange={onChange2}
                     //onChange={onChange}
 
                   >
-                    {categories.map((category) => (
-                      <option>{category.name}</option>
+                    {categories.map((category ,key) => (
+                      <option value={category.name.split(" ").join("-")}>{category.name}</option>
                     ))}
                   </Form.Control>
                 </Col>
@@ -327,11 +336,30 @@ setFile(file)
                 </Col>
               </Form.Group>
 
-
+              <Form.Group as={Row} className="service_form">
+                <Form.Label column sm={4}>
+                  IMAGE:
+                </Form.Label>
+                <Col sm={8} >
+                  <Form.Control 
+                   onSubmit={onSubmitFile}
+                  />
+                   <input
+    
+            type='file'
+            className='custom-file-input'
+            id='customFile'
+            onChange={onChangefile}
+          />  
+          <label className='custom-file-label' htmlFor='customFile'>
+           {filename}
+               </label>
+                </Col>
+              </Form.Group>
 
        {/* my form onSubmit */}
 
-       <form onSubmit={onSubmitFile}>
+       {/* <form onSubmit={onSubmitFile}>
         <div className='custom-file mt-4'>
           <input
             type='file'
@@ -342,7 +370,7 @@ setFile(file)
           <label className='custom-file-label' htmlFor='customFile'>
            {filename}
           </label>
-        </div>
+        </div> */}
 
       {/* <Progress percentage={uploadPercentage} /> */}
 
@@ -351,7 +379,7 @@ setFile(file)
           value='Upload'
           className='btn btn-primary btn-block mt-4'
         /> */}
-      </form>
+      {/* </form> */}
 
 
 

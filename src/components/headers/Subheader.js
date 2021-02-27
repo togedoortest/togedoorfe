@@ -10,7 +10,7 @@ const SubHeader = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("https://www.togedoortestgo.site/graphql/categories");
+      const response = await axios.get(" https://www.togedoortestgo.site/graphql/categories");
       setCategories(response.data);
     }
 

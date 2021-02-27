@@ -14,7 +14,7 @@ const CategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `https://www.togedoortestgo.site/graphql/categories/name/${categoryName}`
+        ` https://www.togedoortestgo.site/graphql/categories/name/${categoryName}`
       );
       setMyCategory(response.data);
     }
@@ -23,11 +23,11 @@ const CategoryScreen = ({ match: { params } }) => {
 
   const [services, setServices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  const sort = services.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1);
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
-      const response = await axios.get("https://www.togedoortestgo.site/graphql/services");
+      const response = await axios.get(" https://www.togedoortestgo.site/graphql/services");
       setServices(response.data);
       setIsLoading(false);
     }
@@ -38,7 +38,7 @@ const CategoryScreen = ({ match: { params } }) => {
   return (
     <div className="category-bg">
       <Header />
-      <div className="category-info">
+      <div className="category-info" style={{ borderBottom: "1px solid rgba(0,0,0,.125)" }} >
         {myCategory ? (
           <div>
             <h1>{myCategory.name}</h1>
@@ -67,8 +67,11 @@ const CategoryScreen = ({ match: { params } }) => {
               : console.log(" underfinedddd : ", myCategory)}
           </ul>
        </div>
+       <Container>
        <Row>
-          {services.map((service, index) => (
+       {services
+                .filter((service) => service.categoryName === categoryName)
+                    .map((service, index) => (
             <ServiceItem
               key={index}
               _id={service._id}
@@ -78,9 +81,10 @@ const CategoryScreen = ({ match: { params } }) => {
               price={service.price}
               rating={service.rating}
               firstname={service.userName}
-            />
+             />
           ))}
         </Row>
+        </Container>
         {/* <div style={{ flexGrow: "8" }} className="cat-subcategory-cards">
           <Container>
             <Row>

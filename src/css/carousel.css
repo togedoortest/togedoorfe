@@ -19,10 +19,10 @@
 
 
 .btnJoinus{
-  background: linear-gradient(to right,  rgba(219, 199, 199, 0.4), rgba(119, 21, 21, 0.4) );
+  background: linear-gradient(to right,  rgba(131, 131, 131, 0.4), rgb(245, 245, 245) );
   font-weight: 800;
   color: black;
-  border-color: rgba(119, 21, 21, 0.4) ;
+  border-color: rgb(231, 225, 225) ;
 }
 
 .btnJoinus:hover{

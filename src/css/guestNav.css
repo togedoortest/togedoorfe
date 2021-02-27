@@ -19,15 +19,16 @@ html {
 }
 
 .guest-nav-links a {
-  color: #000000 !important;
+  color:white !important;
 }
 
 .guest-nav-links a:hover {
-  color: white !important;
+  color: rgb(242, 76, 76) !important;
 }
 
 .guest-nav-bg {
-  background: linear-gradient(to right, #0c010a, #5c525c );
+  /* background: linear-gradient(to right, #0c010a, #5c525c ); */
+  background: rgb(199, 195, 195);
 }
 
 #btnJoinus{

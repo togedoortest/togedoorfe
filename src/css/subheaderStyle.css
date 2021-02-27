@@ -4,7 +4,7 @@
   background-color: transparent;
   cursor: pointer;
   margin: 0px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   border: 1px solid transparent;
   text-overflow: visible;
   border-bottom: 3px solid transparent;
@@ -75,9 +75,11 @@
   padding: 0;
   white-space: nowrap;
   position: inherit;
-  background: linear-gradient(to right, #817e92 , #0c010a );
+  /* background: linear-gradient(to right, #817e92 , #0c010a ); */
   overflow-y: hidden;
+  background: rgb(44, 44, 44);
   overflow-x: scroll; 
+ 
   /* display: flex; */
   z-index: 5;
 }
@@ -87,7 +89,7 @@
 } */
 
 .sub_navbar::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 /* Track */
@@ -102,7 +104,7 @@
 .sub_navbar::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: rgba(128, 7, 7, 0.4); 
+  background: rgba(0, 0, 0, 0.4); 
   box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }

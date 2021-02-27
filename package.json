@@ -1,6 +1,5 @@
 {
-
-
+  "homepage": "http://togedoortest.github.io/togedoorfe",
   "name": "togedoor-frontend",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +18,7 @@
     "emailjs-com": "^2.6.4",
     "nodemailer-react": "^0.1.0",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
+    "react-bootstrap": "^1.5.0",
     "react-dom": "^16.13.1",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.2.1",
@@ -32,14 +31,16 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "socket.io-client": "^3.1.1",
     "stripe": "^8.80.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -55,6 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://togedoorserver-env.eba-666nat8c.us-west-2.elasticbeanstalk.com",
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
- 
 }

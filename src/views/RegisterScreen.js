@@ -10,6 +10,7 @@ import axios from 'axios';
 import GoogleLogin from 'react-google-login'
 import FacebookLogin from 'react-facebook-login';
 import { FaFacebook, FaFacebookF } from "react-icons/fa";
+import RegisterRight from "../uploads/register-right.jpg";
 // // or
 // import { GoogleLogin } from 'react-google-login';
 
@@ -24,15 +25,16 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
     address: "",
     password: "",
     password2: "",
+    picture:"https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
   });
 
-  const { firstname, lastname, address, email, password, password2 } = formData;
+  const { firstname, lastname, address, email, password, password2 ,picture} = formData;
 
   // const responseSuccessGoogle = (response) => {
   //   console.log(response);
   //   // axios({
   //   //   method: "POST",
-  //   //   url: "https://www.togedoortestgo.site/graphql/users/signup",
+  //   //   url: " https://www.togedoortestgo.site/graphql/users/signup",
   //   //   data: { tokenId: response.tokenId }
   //   // }).then(response => {
   //   //   console.log(response)
@@ -54,7 +56,7 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
   const onSubmit = async (e) => {
     if (password !== password2) {
     } else {
-      registerUser({ firstname, lastname, email, address, password });
+      registerUser({ firstname, lastname, email, address, password ,picture});
     }
   };
 
@@ -289,26 +291,26 @@ const RegisterScreen = ({ registerUser, isAuthenticated }) => {
           </form>
         </div>
         <div className="register-content" style={{
-            backgroundImage: `url(${RegistrationScreen})`,
+            backgroundImage: `url(${RegisterRight})`,
           }}>
           <div className="register-headline-content" >
-            <h1 id="register-content-title">
+            <h1 id="register-content-title" style={{color:"white"}}>
               Let's find you the perfect digital job
             </h1>
-            <p className="register-content-text">
+            <p className="register-content-text"  style={{color:"white"}}>
               Create your Digital Profile to start seeing suggested jobs based
               on your skills. Your profile is private and you use it to apply
               for jobs with one click.
             </p>
           </div>
-          <p className="register-content-text" >Already got an account ?</p>
+          <p className="register-content-text"  style={{color:"white"}} >Already got an account ?</p>
           <Button
             href="#/login"
             formNoValidate="true"
             type="submit"
             className="content-login-button"
           >
-            Login Now!
+           <span  style={{color:"black"}}> Login Now! </span>
           </Button>
           {/* <div>
             <GoogleLogin

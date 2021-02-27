@@ -170,12 +170,13 @@ font-size: larger;
 .login-form {
   margin-top: 12em;
   font-size: 18px;
+  color: white;
 }
 
 .login-form input {
   padding-left: 1%;
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(148, 143, 143);
+  color: white;
   width: 60%;
   border: none;
   outline: none;

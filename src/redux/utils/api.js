@@ -3,7 +3,7 @@ import store from "../../store";
 import { LOGOUT } from "../auth/types";
 
 const api = axios.create({
-  baseURL: "https://www.togedoortestgo.site/graphql/users",
+  baseURL: " https://www.togedoortestgo.site/graphql/users",
   headers: {
     "Content-Type": "application/json",
   },

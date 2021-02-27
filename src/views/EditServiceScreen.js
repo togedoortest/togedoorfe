@@ -25,7 +25,7 @@ const EditServiceScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `https://www.togedoortestgo.site/graphql/services/name/${serviceName}`
+        ` https://www.togedoortestgo.site/graphql/services/name/${serviceName}`
       );
       setMyService(response.data);
       console.log(myService);
@@ -42,7 +42,7 @@ const EditServiceScreen = ({ match: { params } }) => {
 
     alert(service.subCategory);
     // axios
-    //   .patch(`https://www.togedoortestgo.site/graphql/services/${service.name}`, service)
+    //   .patch(` https://www.togedoortestgo.site/graphql/services/${service.name}`, service)
     //   .then((response) => {
     //     console.log(response);
     //   })
@@ -65,7 +65,7 @@ const EditServiceScreen = ({ match: { params } }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("https://www.togedoortestgo.site/graphql/categories");
+      const response = await axios.get(" https://www.togedoortestgo.site/graphql/categories");
       setCategories(response.data);
     }
 
@@ -75,7 +75,7 @@ const EditServiceScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `https://www.togedoortestgo.site/graphql/categories/name/${categoryName
+        ` https://www.togedoortestgo.site/graphql/categories/name/${categoryName
           .split(" ")
           .join("-")}`
       );

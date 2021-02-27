@@ -1,8 +1,7 @@
 
 .serviceScreen-details {
-  /* padding-left: 0;
-  max-width: 100em;
-  min-width: 20em; */
+  padding-left: 0;
+  width: 45em;
   height: 50em;
 }
 
@@ -11,6 +10,21 @@
   background: linear-gradient(to bottom, #dfdfdf , #757575, #dfdfdf );
 }
 
+
+.serviceRight{
+  background: white;
+  margin-top: 50px;
+  margin-left: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
 /* .serviceScreen-row{
   padding-left: 100px;
 } */
+
+
+.container{
+  margin: auto;
+}

@@ -11,6 +11,7 @@ import SettingsScreen from "./views/SettingsScreen";
 import EditServiceScreen from "./views/EditServiceScreen";
 import CreateServiceScreen from "./views/CreateServiceScreen";
 import { Checkout } from "./components/Checkout";
+import Chat from "./Chat/components/Chat";
 //SendEmail
 // BrowserRouter
 const Router = () => (
@@ -20,6 +21,7 @@ const Router = () => (
       <Route path="/service/:serviceName" exact component={ServiceScreen} />
       {/* <Route path="/message/:id" exact component={MessageScreen} /> */}
       <Route path="/edit/:serviceName" component={EditServiceScreen} />
+      <Route path="/chat/:id" exact component={Chat} />
       <Route
         path="/categories/:categoryName"
         exact
@@ -35,6 +37,8 @@ const Router = () => (
       <Route path="/register" component={RegisterScreen} />
       <Route path="/settings" component={SettingsScreen} />
       <Route path="/create" component={CreateServiceScreen} />
+      
+      
     </Switch>
   </HashRouter>
 );

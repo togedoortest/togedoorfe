@@ -4,10 +4,11 @@
 }
 
 .serviceItem-card{
-  background: linear-gradient(to right, #ecdfec, #c0c0c0, #ecdfec );
+  /* background: linear-gradient(to right, #ecdfec, #c0c0c0, #ecdfec ); */
+  background: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .serviceItem-card:hover {

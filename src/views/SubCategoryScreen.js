@@ -14,7 +14,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        `https://www.togedoortestgo.site/graphql/subcategories/name/${subcategoryName}`
+        ` https://www.togedoortestgo.site/graphql/subcategories/name/${subcategoryName}`
       );
       setMySubCategory(response.data);
     }
@@ -25,7 +25,7 @@ const SubCategoryScreen = ({ match: { params } }) => {
     async function fetchData() {
       if (mySubCategory) {
         const response = await axios.get(
-          `https://www.togedoortestgo.site/graphql/services/getBySubCategory/${mySubCategory._id}`
+          ` https://www.togedoortestgo.site/graphql/services/getBySubCategory/${mySubCategory._id}`
         );
         setServices(response.data);
         console.log(response);
@@ -33,9 +33,12 @@ const SubCategoryScreen = ({ match: { params } }) => {
     }
     fetchData();
   }, [mySubCategory]);
+  // debugger;
+  // const temp = services.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1);
 
   console.log(mySubCategory);
   console.log(subcategoryName);
+  
   return (
     <div className="subCategory-bg">
       <Header />

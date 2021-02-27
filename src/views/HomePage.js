@@ -24,9 +24,9 @@ const HomeScreen = (props) => {
       try {
         
         setIsLoading(true);
-        //https://www.togedoortestgo.site/graphql/services
+        // https://www.togedoortestgo.site/graphql/services
         // https://togedoor.herokuapp.com/services
-        const response = await axios.get("https://www.togedoortestgo.site/graphql/services");
+        const response = await axios.get(" https://www.togedoortestgo.site/graphql/services");
         setServices(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -36,12 +36,12 @@ const HomeScreen = (props) => {
     fetchData();
   }, []);
 
-  const [userName, setUserName] = useState ()
+  const sort = services.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1);
 
   // debugger
   //   useEffect(() => {
   //     async function fetchData() {
-  //       const response = await axios.get(`https://www.togedoortestgo.site/graphql/users/${props.userName}`);
+  //       const response = await axios.get(` https://www.togedoortestgo.site/graphql/users/${props.userName}`);
   //       setUserName(response.data);
   //     }
   //     fetchData();

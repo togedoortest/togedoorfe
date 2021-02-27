@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Carousel, Button } from "react-bootstrap";
+import { Container, Row, Col, Carousel, Button ,Card } from "react-bootstrap";
 import axios from "axios";
 import store from "../../store";
 import { connect } from "react-redux";
@@ -13,7 +13,12 @@ import Fourth from "../../uploads/emile-perron.jpg";
 
 const CarouselBanner = (props) => {
   const user = store.getState().auth.user;
-  if(user){localStorage.setItem("email", user.email);}
+  console.log('redux user');
+ 
+  if(user){localStorage.setItem("email", user.email);
+  console.log(user._id);
+  localStorage.setItem("id", user._id)
+}
   
   const [index, setIndex] = useState(0);
 
@@ -30,16 +35,17 @@ const CarouselBanner = (props) => {
           md={4}
           xs={4}
           style={{
-            background:" linear-gradient(to bottom, #0c010a, #5c525c )" ,
+            // background:" linear-gradient(to bottom, #0c010a, #5c525c )" ,
             textAlign: "center",
             paddingTop: "3em",
             paddingBottom: "1em",
-            color:"white"
+            
+
           }}
         >
          
           {user ? (
-            <div>
+            <div style={{color:"black"}}>
             <p style={{ fontSize: "1.5em" }}>Hi {user.firstname} </p> 
             <p>Get offers from sellers</p>
             <p>for your project</p>
@@ -63,33 +69,33 @@ const CarouselBanner = (props) => {
             <Carousel.Item>
               <img height="300" src={First} alt="Influencer" />
               <Carousel.Caption className="homepage_carousel_text">
-                <h3>Grow your influencer channel</h3>
-                <p>Handpicked services to help you maximize your earnings.</p>
+                {/* <h3>Grow your influencer channel</h3>
+                <p>Handpicked services to help you maximize your earnings.</p> */}
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
           <img height="300" alt="Brand" src="https://static.wixstatic.com/media/8d6fde_5cc22198bf2d41878bb7f727fababd1d~mv2.jpg/v1/fill/w_1899,h_678,al_c,q_85,usm_0.66_1.00_0.01/8d6fde_5cc22198bf2d41878bb7f727fababd1d~mv2.webp "/>
               {/* <img height="300" src={Second} alt="Brand" /> */}
               <Carousel.Caption className="homepage_carousel_text">
-                <h3>Connect ambitious Students</h3>
-                 <p>with Their future careers</p>
+                {/* <h3>Connect ambitious Students</h3>
+                 <p>with Their future careers</p> */}
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img height="300" src={Third} alt="Gaming" />
               <Carousel.Caption className="homepage_carousel_text">
-                <h3>Togedoor's gaming store</h3>
-                <p>Design,development,animation and more.</p>
+                {/* <h3>Atlantis's gaming store</h3>
+                <p>Design,development,animation and more.</p> */}
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img height="300" src={Fourth} alt="Learn" />
               <Carousel.Caption className="homepage_carousel_text">
-                <h3>Learn something new today</h3>
+                {/* <h3>Learn something new today</h3>
                 <p>
                   Online professional courses, led by the world's leading
                   experts.
-                </p>
+                </p> */}
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

@@ -9,6 +9,7 @@ import { login } from "../redux/auth/thunks";
 import GoogleLogin from 'react-google-login'
 import FacebookLogin from 'react-facebook-login';
 import axios from 'axios'
+import LoginLeft from "../uploads/login-left.jpg";
 
 
 
@@ -42,7 +43,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
   function ApiGoogle(response) {
 
     //loginGoogle("fgd")
-    axios.post('https://www.togedoortestgo.site/graphql/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
+    axios.post(' https://www.togedoortestgo.site/graphql/services/googlelogin', { tokenId: response.tokenId }).then((res) => {
       console.log('res token :');
       setisAuthenticatedGoogle(true)
       console.log(res);
@@ -56,6 +57,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
         //api.defaults.headers.common["Authorization"] = token;
         localStorage.setItem("token", token);
         localStorage.setItem("email", response.profileObj.email);
+      
         window.location.reload(false);
 
       } else {
@@ -94,7 +96,7 @@ const LoginScreen = ({ login, isAuthenticated }) => {
       <div className="login-container">
         <div className="login-wrapper">
           <div className="login-content"  style={{
-            backgroundImage: `url(https://static.wixstatic.com/media/8d6fde_5cc22198bf2d41878bb7f727fababd1d~mv2.jpg/v1/fill/w_1899,h_678,al_c,q_85,usm_0.66_1.00_0.01/8d6fde_5cc22198bf2d41878bb7f727fababd1d~mv2.webp)`,
+            backgroundImage: `url(${LoginLeft})` ,
            
           }}>
             <Link to="/" id="login-brand">
@@ -219,16 +221,15 @@ const LoginScreen = ({ login, isAuthenticated }) => {
 
 
             </div><br />
-            {/* <div className="facebook-login-btn ">
+            <div className="facebook-login-btn ">
               <FacebookLogin
                 cssClass="kep-login-facebook metro"
                 appId="394386971840074"
-                autoLoad={true}
+                autoLoad={false}
                 fields="name,email,picture"
                 icon="fa-facebook-square"
-                callback={responseFacebook}
-                 />
-            </div> */}
+                callback={responseFacebook} />
+            </div>
             <Link id="forget-Password">Forgot Password ?</Link>
           </form>
         </div>

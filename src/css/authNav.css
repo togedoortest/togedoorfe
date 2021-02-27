@@ -14,7 +14,8 @@ html {
   color: #3366ff !important;
 }
 .auth-nav-background{ 
-  background: linear-gradient(to right, #0c010a, #5c525c );
+  /* background: linear-gradient(to right, #0c010a, #5c525c ); */
+  background: rgb(112, 111, 111);
 }
 
 
@@ -72,11 +73,11 @@ html {
 
 .auth_nav_side_menu button:hover {
   font-weight: bold;
-  color:  rgba(128, 7, 7, 0.4);
+  color:  rgba(221, 204, 204, 0.4);
 }
 
 .auth_nav_side_menu a {
-  color:  rgba(128, 7, 7, 0.4);
+  color:  rgba(182, 173, 173, 0.4);
   font-size: 15px;
   
 }
